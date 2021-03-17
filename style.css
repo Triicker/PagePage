@@ -1,0 +1,263 @@
+/*Configurações gerais
+*/
+body{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+h1{
+  font-size: 400%;
+  text-align: center;
+  margin: 60px auto;
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(239, 255, 15); 
+}
+h1::after{
+  content: '|';
+  margin-left: 2px;
+  opacity: 1;
+  animation: pisc .8s infinite;
+}
+@keyframes pisc{
+  0%, 100%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+
+}
+h2, h3{
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+}
+.botao{
+  color: rgb(14, 12, 12);
+  text-decoration: none;
+  padding: 10px 30px;
+  background-color: rgb(231, 255, 13);
+  font-size: .9em;
+  border-radius:9px;
+  font-weight: 700;
+}
+.botao:hover{
+  background-color: rgb(33, 18, 247);
+}
+/* Configuração de navegação
+*/
+nav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: RGBA(30, 0, 255, 1);
+}
+nav > a{
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 28px;
+  font-family: sans-serif;
+}
+
+nav ul{
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+nav ul li{
+  text-align: center;
+  width: 100%;
+}
+nav ul li a{
+  display: inline-block;
+  padding: 10px 0;
+  width: 100%;
+  text-decoration: 0;
+  color: rgb(250, 250, 250);
+  font-weight: 700;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Cabeçalho
+*/
+header{
+  background-color: RGBA(255, 0, 97, 1);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+header p{
+  margin-bottom: 2em;
+}
+
+/*sobre
+*/
+#sobre{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: RGBA(225, 255, 0, 1);
+  color: black;
+  padding: 0 20px 20px;
+}
+#sobre h2{
+  font-size: 100px;
+}
+#sobre p{
+  margin-bottom: 2.5em;
+  max-width: 1000px;
+  color: #0025f8;
+  font-size: 20px;
+}
+
+/*serviços
+*/
+#serviços{
+  background-color: #00FF9E;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#serviços div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+}
+
+/*portfolio
+*/
+#portfolio{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  background-color: red;
+}
+#porfolio h2{
+  margin-bottom: 20px;
+}
+#portfolio img{
+  width: 200px;
+  
+}
+/*Contato
+*/
+#contato{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/*footer
+*/
+footer{
+  text-align: center;
+  padding: 10px;
+  background-color: yellow;
+  width: 100%;
+  color: black;
+}
+
+/*media query
+*/
+@media screen and (min-width: 768px){
+  nav{
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  nav ul{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+  }
+  nav ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 120px;
+    margin: 22px;
+    cursor: pointer;
+    position: relative;
+  }
+  nav ul li a{
+    position: absolute;
+      color: #ffffff;
+      text-decoration: none;
+      transition: all 0.2s linear;
+      font-size: 20px;
+      display: block;
+      top: 25%;
+      left: 25%;
+
+      &:active {
+        transform: scale(0.7);
+      }
+    
+  
+  header{
+    height: 600px;
+    height: 60vh;
+    justify-content: center;
+  }
+  #sobre{
+    height: 30vh;
+    height: 250px;
+    justify-content: center;
+    min-height: 250px;
+  }
+  #serviços{
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    max-width: 10000px;
+    margin: 0 auto;
+  }
+  #serviços h2{
+    text-align: center;
+    width: 100%;
+  }
+  #serviços div{
+    flex-grow: 1;
+    flex-basis: 150px;
+    padding: 0 10px;
+
+  }
+  #portfolio{
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  #portfolio h2{
+    width: 100%;
+    text-align: center;
+  }
+  #portfolio img{
+    width: 10px;
+    
+  }
+  #contato{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  #contato h2,
+  #contato p{
+    width: 100%;
+  }
